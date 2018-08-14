@@ -4,7 +4,7 @@ html {
   font-family: Helvetica;
 }
 
-.banner {
+header {
   background-image: url("../images/banner.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -18,7 +18,7 @@ html {
   margin: auto;
 }
 
-header {
+header .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,27 +46,25 @@ header .logo {
   padding-right: 2rem;
 }
 
-.slogan {
+.banner {
   display: flex;
-  position: relative;
+  justify-content: flex-end;
 }
 
-.slogan div {
+.slogan {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
   padding: 1.5rem 5rem;
   background-color: white;
-  position: absolute;
-  top: 10rem;
-  right: -2rem;
+  margin-top: 10rem;
+  margin-right: -2rem;
 }
 
 .services {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*border: 1px solid black;*/
 }
 
 .service {
@@ -132,4 +130,103 @@ footer .logo {
   width: auto;
   margin-right: 1rem;
   margin-left: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+    padding: 0;
+  }
+
+  .top-bar.container {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .slogan {
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .menu .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .company {
+    display: none;
+  }
+
+  header {
+    background-position: 20%;
+    height: 17rem;
+    padding: 0;
+  }
+
+  .slogan {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0;
+    margin: 9rem 0 auto 0;
+    text-align: center;
+  }
+
+  .services {
+    flex-direction: column;
+    margin: 3rem 0;
+  }
+
+  .service {
+    height: auto;
+    margin: 0.77rem;
+    padding: 0;
+  }
+
+  .description {
+    font-size: 0.77rem;
+    padding-top: 0.77rem;
+  }
+
+  .subcontainer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .info {
+    width: 100%;
+    margin: 0 0 5rem 0;
+  }
+
+  .info .title {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .info .description {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.77rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer .copyright {
+    display: none;
+  }
 }
